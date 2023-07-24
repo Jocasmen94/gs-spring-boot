@@ -42,24 +42,21 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!-- Remove Cobertura Plugin -->
-            <!--
+            <!-- Exclude Cobertura Plugin -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <version>2.7</version>
                 <configuration>
-                    Configure Cobertura if needed
+                    <skip>true</skip>
                 </configuration>
                 <executions>
                     <execution>
-                        <goals>
-                            <goal>instrument</goal>
-                        </goals>
+                        <id>default-prepare-agent</id>
+                        <phase>none</phase>
                     </execution>
                 </executions>
             </plugin>
-            -->
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <executions>
