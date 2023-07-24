@@ -55,23 +55,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!-- Add the Cobertura Maven Plugin -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>cobertura-maven-plugin</artifactId>
-                <version>2.8</version>
-                <configuration>
-                    <!-- Configure Cobertura if needed -->
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>clean</goal>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+            <!-- No Cobertura plugin section, as it has been removed -->
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <executions>
