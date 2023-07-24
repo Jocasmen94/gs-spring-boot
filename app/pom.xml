@@ -10,6 +10,8 @@
     <properties>
         <!-- Update the Java version to JDK 11 -->
         <java.version>11</java.version>
+        <!-- Specify Spring Boot version -->
+        <spring.boot.version>2.5.4</spring.boot.version>
     </properties>
 
     <dependencies>
@@ -17,6 +19,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.boot.version}</version>
         </dependency>
 
         <!-- JUnit 4 for testing -->
@@ -48,9 +51,11 @@
                     <target>11</target>
                 </configuration>
             </plugin>
+            <!-- Add the Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.version}</version>
             </plugin>
 
             <!-- Optional: Add the Cobertura Maven Plugin -->
@@ -75,6 +80,7 @@
 
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
+                <version>3.0.0-M5</version>
                 <executions>
                     <execution>
                         <goals>
